@@ -1,0 +1,67 @@
+#
+# Intel(R) 64 and IA-32 Architectures Software DeveloperÅfs Manual
+# Order Number: 325462-046US
+# March 2013
+#
+
+#
+# 18.4
+# PERFORMANCE MONITORING
+# (PROCESSORS BASED ON INTEL(R) CORETM MICROARCHITECTURE)
+#
+
+#
+# Figure 18-10.
+# Layout of MSR_PERF_FIXED_CTR_CTRL MSR
+#
+prefix	MSR_PERF_FIXED_CTR_CTRL
+endian	little
+size	64
+2	EN0
+1
+1	PMI0
+2	EN1
+1
+1	PMI1
+2	EN2
+1
+1	PMI2
+20
+32
+
+#
+# Figure 18-11.
+# Layout of MSR_PERF_GLOBAL_CTRL MSR
+#
+prefix	MSR_PERF_GLOBAL_CTRL
+endian	little
+size	64
+1	PMC0
+1	PMC1
+30
+1	FIXED_CTR0
+1	FIXED_CTR1
+1	FIXED_CTR2
+29
+
+#
+# Figure 18-12.
+# Layout of MSR_PERF_GLOBAL_STATUS MSR
+#
+prefix	MSR_PERF_GLOBAL_STATUS
+endian	little
+size	64
+1	PMC0_OVF
+1	PMC1_OVF
+30
+1	FIXED_CTR0_OVF
+1	FIXED_CTR1_OVF
+1	FIXED_CTR2_OVF
+27
+1	OvfBuffer
+1	CondChgd
+
+#
+# Figure 18-13. Layout of MSR_PERF_GLOBAL_OVF_CTRL MSR
+# XXX Same layout as MSR_PERF_GLOBAL_STATUS
+#
